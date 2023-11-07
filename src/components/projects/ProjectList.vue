@@ -12,6 +12,7 @@ export default {
       pagination :{
         next: null,
         prev: null,
+        links: null
       }
     };
   },
@@ -26,6 +27,7 @@ export default {
         this.projects = response.data.data;
         this.pagination.prev =response.data.prev_page_url;
         this.pagination.next =response.data.next_page_url;
+        this.pagination.links =response.data.links;
 
       });
     },
@@ -49,11 +51,20 @@ export default {
         <ProjectCard :project="project"/>
       </div>
     </div>
-    <div class="d-flex align-items-center justify-content-between">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item" v-for="(link,index) in this.pagination.links"  @click="fetchProjects(link.url)">
+          <a class="page-link" href="#" v-html="link.label" ></a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- <div class="d-flex align-items-center justify-content-between">
       <span v-if="this.pagination.prev != null" class="btn btn-outline-secondary py-0 me-1 my-3" @click="fetchProjects(this.pagination.prev)">prev Page</span>
+        <div v-for="(link,index) in this.pagination.links" class="btn btn-outline-secondary py-0 me-1 my-3" @click="fetchProjects(link.url)">{{ index }}</div>
       <span v-if="this.pagination.next != null" class="btn btn-outline-secondary py-0 me-1 my-3" @click="fetchProjects(this.pagination.next)">Next Page</span>
 
-    </div>
+    </div> -->
   </div>
 
 </template>
