@@ -8,7 +8,7 @@ export default {
     }
   },
   props:{
-    project:Array
+    project:Object
   },
 
   // components: {
@@ -19,7 +19,7 @@ export default {
 
 <template>
   
-<div class="card">
+<div class="card h-100">
     <div class="card-header">
         <div class="row row-cols-2">
             <!--* type badge -->
@@ -43,6 +43,9 @@ export default {
     </div>
     <div class="card-body">
         <h4>{{ project.title }}</h4>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-outline-primary py-0 me-1">Vedi</a>
     </div>
 </div>
   

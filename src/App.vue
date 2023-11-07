@@ -1,32 +1,19 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
 import projectList from "./components/projects/projectList.vue";
-import axios from "axios";
+import { store } from "./data/store";
 export default {
   data() {
     return {
       title: "Vite Boolfolio",
-      projects: [],
-      api: {
-        baseUrl: 'http://localhost:8000/api/'
-      }
+
     };
   },
-  methods: {
-    fetchProjects(url = this.api.baseUrl + 'projects') {
-      axios.get(url).then((response) => {
-        // console.log(response);
-        this.projects = response.data.data;
-      });
-    },
-  },
+
   components: {
     projectList,
   },
-  created() {
-    this.fetchProjects();
-    console.log(this.projects);
-  },
+
 };
 </script>
 
@@ -35,7 +22,8 @@ export default {
 
   <br />
 <!-- min 45 per eventuali correzioni -->
-  <projectList :projects="projects" />
+  <projectList />
+  
 </template>
 
 <style lang="scss" scoped></style>
