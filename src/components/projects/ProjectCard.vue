@@ -7,7 +7,7 @@ export default {
       title: "Hello world"
     }
   },
-  props:{
+  props:{ 
     project:Object
   },
 

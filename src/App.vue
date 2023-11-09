@@ -18,11 +18,8 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
 
-  <br />
-<!-- min 45 per eventuali correzioni -->
-  <projectList />
+  <router-view />
   
 </template>
 
