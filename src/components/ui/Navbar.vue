@@ -22,7 +22,7 @@ export default {
         <ul class="navbar-nav">
             <li class="nav-item">
 
-                <router-link :to="{ name: 'Portfolio' }" class="nav-link">
+                <router-link :to="{ name: 'PortfolioPage' }" class="nav-link">
                     Portfolio
                 </router-link>
 

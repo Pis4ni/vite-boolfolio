@@ -8,7 +8,8 @@ export default {
     }
   },
   props:{ 
-    project:Object
+    project:Object,
+    isDetail: Boolean
   },
 
   // components: {
@@ -23,7 +24,7 @@ export default {
     <div class="card-header">
         <div class="row row-cols-2">
             <!--* type badge -->
-            <div class="col">
+            <div class="col" v-if="project.type">
                 <span
                     class="badge"
                     :style="{ backgroundColor: project.type.color }">
@@ -39,13 +40,16 @@ export default {
                     {{ technology.label }}
                 </span>
             </div>
-            </div>
+          </div>
     </div>
     <div class="card-body">
         <h4>{{ project.title }}</h4>
+
+        <p v-if="project.description">{{ project.description }}</p>
     </div>
     <div class="card-footer">
-        <a href="#" class="btn btn-outline-primary py-0 me-1">Vedi</a>
+        <!-- <a href="#" class="btn btn-outline-primary py-0 me-1">Vedi</a> -->
+        <router-link v-if="!isDetail" :to="{ name: 'ProjectPage', params: {id: project.id}  }" class="btn btn-outline-primary py-0 me-1">Vedi</router-link>
     </div>
 </div>
   

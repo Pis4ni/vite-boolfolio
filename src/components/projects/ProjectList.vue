@@ -48,7 +48,7 @@ export default {
     <hr />
     <div class="row row-cols-4 g-4">
       <div class="col" v-for="project in projects" >
-        <ProjectCard :project="project"/>
+        <ProjectCard :project="project" :isDetail="false"/>
       </div>
     </div>
     <nav aria-label="Page navigation example">
