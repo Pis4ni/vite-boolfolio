@@ -1,10 +1,10 @@
 <script>
-import ProjectList from "./components/projects/ProjectList.vue";
+import ProjectList from "../components/projects/ProjectList.vue";
 
 export default {
   data() {
     return {
-      title: "Blog Page"
+      title: "Portfolio"
     }
   },
   components: {

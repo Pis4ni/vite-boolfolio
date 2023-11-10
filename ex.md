@@ -40,7 +40,7 @@ La homepage è da realizzare a piacere (per ultima)
 Il portfolio conterrà una lista di projects impaginati
 Il project-detail conterrà il dettaglio di un singolo progetto (da utilizzare quindi un parametro nell'url e nei <router-link>)
 NB: In questa milestone basterà vedere le pagine, non serve aggiungere il contenuto.
-## Milestone 3 (Vue)
+## Milestone 3 (Vue) 0:48:30
 Aggiungere una navbar e tutti i router-link per permettere la navigazione
 ## Milestone 4 (Laravel)
 Realizzare e testare le chiamate API (Api\ProjectController, metodi index e show).
@@ -50,3 +50,5 @@ Effettuare chiamate alle API da Axios e aggiungere il contenuto alle pagine port
 Completare la homepage
 ## Bonus 2
 Realizzare un form dei contatti che invii una mail con la configurazione di mailtrap (modificato) 
+
+# continua da 1:00 85A
