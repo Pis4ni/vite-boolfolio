@@ -51,4 +51,17 @@ Completare la homepage
 ## Bonus 2
 Realizzare un form dei contatti che invii una mail con la configurazione di mailtrap (modificato) 
 
-# continua da 1:00 85A
+# C
+
+Oggi continuate a lavorare nelle repo laravel-api e vite-boolfolio.
+## milestone 0
+Create una pagina per visualizzare i post filtrati per categoria e l'API corrispondente.
+## Bonus 1
+Creare una pagina 404 customizzata
+## Bonus 2
+Gestire gli errori di post e categoria "not found" su Laravel e Vue portando l'utente alla pagina 404
+
+
+continuoa da lezione 86B
+
+<!-- todo devi fare ancora il componente pagination e applicarlo dove serve -->

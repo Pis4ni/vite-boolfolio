@@ -51,7 +51,7 @@ export default {
         <ProjectCard :project="project" :isDetail="false"/>
       </div>
     </div>
-    <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation">
       <ul class="pagination">
         <li class="page-item" v-for="(link,index) in this.pagination.links"  @click="fetchProjects(link.url)">
           <a class="page-link" href="#" v-html="link.label" ></a>

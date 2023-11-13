@@ -25,11 +25,19 @@ export default {
         <div class="row row-cols-2">
             <!--* type badge -->
             <div class="col" v-if="project.type">
-                <span
+                <router-link
+                  :to="{
+                    name: 'Project-by-type',
+                    params:  
+                    {
+                        type_id: project.type_id
+                    }
+                  }"
                     class="badge"
                     :style="{ backgroundColor: project.type.color }">
                     {{ project.type.label }}
-                </span>
+                    
+                </router-link>
             </div>
             <!--* technologies badge -->
             <div class="col">
